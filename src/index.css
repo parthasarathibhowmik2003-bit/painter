@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-mica: rgba(255, 255, 255, 0.85);
+  --color-mica-dark: rgba(32, 32, 32, 0.9);
+  
+  --color-win-bg: #f3f3f3;
+  --color-win-border: #e5e5e5;
+  --color-win-accent: #0067c0;
+  --color-win-workspace: #e0e0e0;
+}
+
+@layer base {
+  body {
+    @apply bg-win-bg text-[#1b1b1b] antialiased overflow-hidden h-screen font-sans;
+  }
+}
+
+.mica {
+  backdrop-filter: blur(12px);
+  background-color: var(--color-mica);
+}
+
+.win-card {
+  @apply bg-white border border-win-border shadow-sm;
+}
+
+.win-sidebar {
+  @apply w-64 bg-[#202020] border-r border-[#333333] p-4 flex flex-col gap-6 text-white/90;
+}
+
+.win-button-primary {
+  @apply flex items-center gap-2 px-4 py-1.5 bg-[#0067c0] text-white rounded-md hover:bg-[#005fb8] shadow-sm transition-all text-sm font-medium;
+}
+
+.win-button-ghost {
+  @apply p-2 hover:bg-[#f5f5f5] rounded-md transition-colors text-gray-600;
+}
+
+/* Custom drawing cursor */
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+/* Scrollbar styling for Windows 11 feel */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a6a6a6;
+}

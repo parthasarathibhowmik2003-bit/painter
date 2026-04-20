@@ -1,0 +1,6 @@
+{
+  "name": "Fluent Paint",
+  "description": "A Windows 11-inspired digital art tool with drawing, shapes, and PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
